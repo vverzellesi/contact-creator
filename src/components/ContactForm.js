@@ -68,11 +68,11 @@ const ContactForm = () => {
     };
 
     const buildContactLink = (id, crm) => {
-        if (crm === 'hubspot') {
-            return `https://app.hubspot.com/contacts/${process.env.REACT_APP_HUBSPOT_COMPANY_ID}/record/0-1/${id}`;
-        } else if (crm === 'pipedrive') {
-            return `https://${process.env.REACT_APP_PIPEDRIVE_COMPANY_ID}.pipedrive.com/person/${id}`;
+        const crmLinkTemplates = {
+            hubspot: `https://app.hubspot.com/contacts/${process.env.REACT_APP_HUBSPOT_COMPANY_ID}/record/0-1/${id}`,
+            pipedrive: `https://${process.env.REACT_APP_PIPEDRIVE_COMPANY_ID}.pipedrive.com/person/${id}`,
         }
+        return crmLinkTemplates[crm] || null;
     }
 
     return (
