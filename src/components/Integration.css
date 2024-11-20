@@ -1,0 +1,15 @@
+.integrate-button {
+    width: 100%;
+    padding: 8px 24px;
+    margin: 10px 0 50px 0;
+    border-radius: 25px;
+    background: linear-gradient(90deg, #9384f9, #6c57f2) border-box;
+    border: 1px solid transparent;
+    font-size: 14px;
+    cursor: pointer;
+    color: #fff;
+}
+
+.integrate-button:hover {
+    background: #6c57f2;
+}
